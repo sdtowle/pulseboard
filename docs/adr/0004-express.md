@@ -1,6 +1,6 @@
 # ADR 0004: Use Express as the web framework
 
-- **Status:** Accepted
+- **Status:** Proposed (under review: whether the back end uses a framework at all is still open)
 - **Date:** 2026-10-24
 
 ## Context

@@ -1,6 +1,6 @@
 # ADR 0005: Use Zod for runtime validation
 
-- **Status:** Accepted
+- **Status:** Proposed (depends on the back-end framework decision in ADR 0004)
 - **Date:** 2026-10-24
 
 ## Context

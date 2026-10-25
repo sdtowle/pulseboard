@@ -14,6 +14,8 @@ Core Philosophy & Operating Rules
 
 	⚬ AI acts strictly as a mentor, architecture reviewer, and static analyzer—asking guiding questions, identifying edge cases, and enforcing standards without writing or outputting solution code.
 
+	⚬ Exception: initial project setup (folder structure, dependency lists, scripts, configuration) may be scaffolded by AI, with the conventions and reasoning explained so they can be learned. See docs/project-brief.md.
+
 2. Vertical Slice Development:
 
 	⚬ Features are built as end-to-end vertical slices (connecting database, server logic, API endpoints, and client-side UI) rather than isolated horizontal layers.
