@@ -15,6 +15,30 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Baseline / starting point:** the known-good setup every new piece of work begins from (same tools, same folders, same commands).
 - **Cross-cutting:** applies to the whole project rather than one feature (logging, CI).
 
+## Decision-making terms
+- **Back-of-the-envelope estimation:** rough arithmetic to find the order of magnitude of load, storage and bandwidth (10 writes a second or 10,000?). Also called capacity estimation or napkin math.
+- **Workload characterization:** describing how a system will be used: read/write ratio, access patterns, peak vs average load, how fast data grows.
+- **Functional vs non-functional requirement (NFR):** what the system *does* vs how well it must do it (speed, durability, cost, ease of running). Database choices are driven mostly by the non-functional ones.
+- **Trade-off analysis:** comparing options by what each gains and gives up, instead of looking for a "best" one.
+- **Decision matrix:** a table of candidates against criteria (optionally weighted) that makes the reasoning visible and open to challenge.
+- **Proof of concept (PoC):** a small, throwaway build that tests a risky assumption. Similar to a spike.
+- **Fitness for purpose:** how well an option suits *your* needs, rather than how good it is in general.
+- **Reversibility:** how costly it is to change a decision later.
+- **Order of magnitude:** a factor of ten. Estimates aim to get this right, not the exact number.
+- **QPS / TPS:** queries or transactions per second.
+- **Headroom:** spare capacity above the expected load.
+- **Read/write ratio:** how many reads the system does for each write.
+- **Working set:** the portion of the data in active use at a given time.
+
+## Tooling terms
+- **Runtime:** the program that executes your code (here, Node.js).
+- **Linter:** a tool that scans code for likely mistakes and style problems without running it (ESLint).
+- **Formatter:** a tool that rewrites code layout (spacing, line breaks) to one consistent style (Prettier).
+- **Static typing:** types are checked before the code runs. TypeScript adds this to JavaScript.
+- **Type erasure:** types exist only at compile time and are removed from the running program, so they can't check data arriving from outside.
+- **Runtime validation:** checking at run time that outside data (request bodies, environment variables) has the expected shape. Schema libraries such as Zod do this.
+- **Boundary (system boundary):** the point where data enters or leaves your code (HTTP requests, database, files). Validate here.
+
 ## Roles
 - **Operator:** the person running and maintaining PulseBoard.
 - **User:** the person using PulseBoard to watch their own services.
@@ -33,6 +57,17 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Retention / pruning:** how long you keep old data, and deleting what's older.
 - **Concurrency:** doing several things at once (e.g. many checks in parallel). **Bounded concurrency** caps how many.
 - **Timeout:** giving up after a set time instead of waiting forever.
+- **Relational database (SQL):** data in tables with defined columns, linked by keys and queried with SQL.
+- **Non-relational (NoSQL):** a broad family that doesn't use linked tables. Includes document (JSON-like records), key-value (lookup by key) and wide-column stores.
+- **Primary key / foreign key:** a column that uniquely identifies a row / a column that points to a row in another table.
+- **Normalization / denormalization:** splitting data into separate tables to avoid repeating it / deliberately repeating some to make reads faster.
+- **Transaction:** a group of changes that all succeed or all fail together.
+- **ACID:** the guarantees a transaction gives: **Atomicity** (all or nothing), **Consistency** (rules always hold), **Isolation** (concurrent transactions don't interfere), **Durability** (once saved, it survives a crash).
+- **Embedded vs client-server database:** one runs inside your own process and stores data in a file; the other runs as a separate server your app connects to.
+- **Connection pooling:** reusing a small set of open database connections instead of opening one per request.
+- **Query builder / ORM / raw SQL:** three ways to talk to a database from code: composing queries with functions / mapping rows to objects / writing the SQL yourself.
+- **Query planner / `EXPLAIN`:** the part of a database that chooses how to run a query, and the command that shows its choice.
+- **Multi-tenancy:** one running system serving many separate users, whose data must stay isolated.
 - **Repository / data-access layer:** the one place in the code that talks to the database.
 - **Fail fast:** crash immediately with a clear message on bad setup, rather than misbehaving later.
 - **Graceful shutdown:** stopping by finishing or cleanly abandoning current work, not cutting it off.
