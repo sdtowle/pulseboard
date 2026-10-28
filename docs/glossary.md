@@ -39,6 +39,22 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Runtime validation:** checking at run time that outside data (request bodies, environment variables) has the expected shape. Schema libraries such as Zod do this.
 - **Boundary (system boundary):** the point where data enters or leaves your code (HTTP requests, database, files). Validate here.
 
+## Git and workflow terms
+- **Branch:** a separate line of commits, so a change can be built without touching `main` until it's ready.
+- **Pull request (PR):** a request to merge one branch into another. It is a page for the description, the checks and the review, and it leaves a record of why the change was made.
+- **Merge commit:** merging by adding a new commit with two parents, which keeps every commit from the branch and shows where the branch joined. The history is a graph, not a straight line.
+- **Squash merge:** collapsing all of a branch's commits into one new commit on `main`. History stays a straight line with one commit per PR. The branch's individual commits aren't kept on `main`.
+- **Rebase (and merge):** replaying a branch's commits on top of the latest `main`, one by one, so history is a straight line and every commit is kept. The commits get new hashes, so rewriting shared history this way is risky.
+- **Fast-forward:** moving a branch pointer forward when nothing has diverged. There's no merge commit because none is needed.
+- **Force push:** overwriting the remote branch with your local one, discarding what was there. `--force-with-lease` refuses if someone else has pushed since you last fetched.
+- **Branch protection / ruleset:** GitHub settings that stop direct pushes to a branch and can require a PR and passing checks before merging.
+- **Status check:** an automatic result (lint, tests) shown on a PR. Branch protection can make a passing check mandatory.
+- **Branch naming convention:** an agreed pattern for branch names, e.g. `type/issue-number-short-description`.
+- **Slug:** a short, URL-safe label made of lowercase words joined by hyphens, e.g. `http-server`.
+- **Worktree:** a second checked-out folder for another branch of the same repository, so you can switch tasks without stashing.
+- **Conventional Commits:** a convention for commit messages that starts with a type (`feat:`, `fix:`, `docs:`). Some tools use it to build changelogs.
+- **CONTRIBUTING.md:** a file explaining how to set up the project and how to work on it, written for someone new to it.
+
 ## Roles
 - **Operator:** the person running and maintaining PulseBoard.
 - **User:** the person using PulseBoard to watch their own services.
