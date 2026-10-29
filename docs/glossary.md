@@ -37,6 +37,10 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Static typing:** types are checked before the code runs. TypeScript adds this to JavaScript.
 - **Type erasure:** types exist only at compile time and are removed from the running program, so they can't check data arriving from outside.
 - **Runtime validation:** checking at run time that outside data (request bodies, environment variables) has the expected shape. Schema libraries such as Zod do this.
+- **Bundler / dev server (Vite):** a tool that combines your source files into the few files a browser loads, and runs a local server that updates the page as you edit. Vite is one example.
+- **Transpile vs type-check:** transpiling turns TypeScript into JavaScript by stripping the types. Type-checking is the separate step that finds type errors. Some tools (Vite among them) do only the first, so a type-check step such as `tsc --noEmit` is run separately.
+- **Package scope (`@pulseboard/shared`):** a prefix in a package's name that groups related packages. Other packages in the workspace import it by that name.
+- **Dependency direction:** which packages are allowed to import which. Apps may import libraries, and libraries should never import apps.
 - **Package (`package.json`):** a folder with a `package.json` file that lists its name, scripts and dependencies. It is the unit npm installs and runs.
 - **pnpm:** a package manager (an alternative to npm). It installs faster and only lets a package import what it has declared as a dependency.
 - **Corepack:** a tool that ships with Node and installs the right version of a package manager such as pnpm for a project.
