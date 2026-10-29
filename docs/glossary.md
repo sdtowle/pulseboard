@@ -37,6 +37,13 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Static typing:** types are checked before the code runs. TypeScript adds this to JavaScript.
 - **Type erasure:** types exist only at compile time and are removed from the running program, so they can't check data arriving from outside.
 - **Runtime validation:** checking at run time that outside data (request bodies, environment variables) has the expected shape. Schema libraries such as Zod do this.
+- **Package (`package.json`):** a folder with a `package.json` file that lists its name, scripts and dependencies. It is the unit npm installs and runs.
+- **Dependency vs devDependency:** a library the app needs to run vs one needed only while building or checking it (linter, test runner, compiler).
+- **Lockfile (`package-lock.json`):** a record of the exact versions installed, so every machine gets the same ones.
+- **Monorepo:** one repository holding several packages, such as a front end, a back end and shared code.
+- **Workspaces:** npm's (and pnpm's and Yarn's) built-in support for monorepos. One install at the root covers every package, and packages can depend on each other by name.
+- **Hoisting:** installing a shared dependency once at the root `node_modules` instead of once per package.
+- **Build orchestrator (Turborepo, Nx):** a tool that runs tasks across the packages of a monorepo in the right order and caches the results.
 - **Boundary (system boundary):** the point where data enters or leaves your code (HTTP requests, database, files). Validate here.
 
 ## Git and workflow terms
