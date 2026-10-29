@@ -1,6 +1,6 @@
 # ADR 0008: Use Vite for the client
 
-- **Status:** Proposed (for review)
+- **Status:** Accepted
 - **Date:** 2026-10-29
 
 ## Context

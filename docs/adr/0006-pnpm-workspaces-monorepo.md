@@ -1,6 +1,6 @@
 # ADR 0006: Use a monorepo with pnpm workspaces
 
-- **Status:** Proposed (for review)
+- **Status:** Accepted
 - **Date:** 2026-10-29
 
 ## Context

@@ -1,6 +1,6 @@
 # ADR 0007: Project structure
 
-- **Status:** Proposed (for review)
+- **Status:** Accepted
 - **Date:** 2026-10-29
 
 ## Context
