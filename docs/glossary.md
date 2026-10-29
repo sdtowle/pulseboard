@@ -38,6 +38,9 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Type erasure:** types exist only at compile time and are removed from the running program, so they can't check data arriving from outside.
 - **Runtime validation:** checking at run time that outside data (request bodies, environment variables) has the expected shape. Schema libraries such as Zod do this.
 - **Package (`package.json`):** a folder with a `package.json` file that lists its name, scripts and dependencies. It is the unit npm installs and runs.
+- **pnpm:** a package manager (an alternative to npm). It installs faster and only lets a package import what it has declared as a dependency.
+- **Corepack:** a tool that ships with Node and installs the right version of a package manager such as pnpm for a project.
+- **Entry point:** the file a program starts from. A package can have more than one (for example one for the server and one for the worker).
 - **Dependency vs devDependency:** a library the app needs to run vs one needed only while building or checking it (linter, test runner, compiler).
 - **Lockfile (`package-lock.json`):** a record of the exact versions installed, so every machine gets the same ones.
 - **Monorepo:** one repository holding several packages, such as a front end, a back end and shared code.
