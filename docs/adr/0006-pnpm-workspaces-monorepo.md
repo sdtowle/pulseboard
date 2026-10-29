@@ -44,7 +44,7 @@ Tooling lives once at the root: the base TypeScript configuration, ESLint, Prett
 - The worker is part of the server package but runs as a separate process. This follows the job queue work in the backlog (ticket 3.7), where workers must run separately from the API. If the worker grows enough to need its own dependencies or deployment, it can be moved into its own package.
 - pnpm needs to be installed alongside Node. Contributors can use Node's built-in `corepack` for this.
 - How the other packages use `shared` is not decided yet. It could import the source directly or use a compiled version. This will be decided by a spike (issue #44) and recorded in its own ADR.
-- Folder names (for example `packages/` versus `apps/`) are decided when the project structure is set up.
+- The folder layout (`apps/` for the server and client, `packages/` for shared code) is set out in ADR 0007.
 
 ## Revisit
 
