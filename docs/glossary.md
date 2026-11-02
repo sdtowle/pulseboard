@@ -92,6 +92,9 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Status page:** a public page showing whether a service is up.
 - **Append-only:** data that is only ever added to, never edited (check results are like this).
 - **Latency (p50 / p95):** response time. p50 is the typical (median) request; p95 means 95% of requests were faster, so it shows the slow tail.
+- **Raw data vs rollup (downsampling):** raw data is every individual record (one row per check). A rollup is a summary of many of them (one row per monitor per hour with uptime % and average latency). Rollups are far smaller, so they can be kept much longer.
+- **Tiered retention:** keeping different kinds of data for different lengths of time, e.g. raw results for a week, hourly rollups for a year, and status changes forever.
+- **State change (status transition):** the moment a monitor goes from up to down or back. Storing only these is tiny compared with storing every check, and it is enough to answer "when was it down?".
 - **Retention / pruning:** how long you keep old data, and deleting what's older.
 - **Concurrency:** doing several things at once (e.g. many checks in parallel). **Bounded concurrency** caps how many.
 - **Timeout:** giving up after a set time instead of waiting forever.
