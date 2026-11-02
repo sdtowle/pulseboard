@@ -83,6 +83,14 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Index:** a lookup structure that makes queries on a column fast, at the cost of slower writes.
 - **Time-series data:** records stamped with a time that mostly get appended (like check results).
 - **Aggregate:** a summary computed from many rows (uptime %, average latency).
+- **Uptime / availability:** the share of time a service was working, usually shown as a percentage over a period (e.g. 99.9% over 30 days).
+- **SLA / SLO:** a service-level agreement is a promise made to customers (e.g. 99.9% uptime); a service-level objective is the internal target for it.
+- **Assertion:** a condition a check result must meet to count as healthy (status code is 200, body contains a word, response under 500 ms).
+- **Heartbeat (push) monitor:** the reverse of a normal check. The monitored job calls PulseBoard on a schedule, and PulseBoard raises an alert if the call stops arriving. Also called a dead man's switch.
+- **Confirmation retries:** re-checking a failure a few times before declaring the service down, so one dropped request doesn't trigger an alert.
+- **Maintenance window:** a planned period when alerts are paused because downtime is expected.
+- **Status page:** a public page showing whether a service is up.
+- **Append-only:** data that is only ever added to, never edited (check results are like this).
 - **Latency (p50 / p95):** response time. p50 is the typical (median) request; p95 means 95% of requests were faster, so it shows the slow tail.
 - **Retention / pruning:** how long you keep old data, and deleting what's older.
 - **Concurrency:** doing several things at once (e.g. many checks in parallel). **Bounded concurrency** caps how many.
