@@ -61,7 +61,7 @@ pulseboard/
 ## Open questions
 
 - How the apps use the shared package (importing source or building first). This is the subject of the spike in issue #44.
-- Which database to use and how the code accesses it (ticket 0.2). The decision about where the database code lives will be revisited then.
+- How the code accesses the database (raw SQL, a query builder or an ORM). The database itself is chosen in ADR 0009. The decision about where the database code lives will be revisited once the access approach is chosen.
 
 ## Revisit
 
