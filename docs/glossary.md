@@ -105,6 +105,11 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Transaction:** a group of changes that all succeed or all fail together.
 - **ACID:** the guarantees a transaction gives: **Atomicity** (all or nothing), **Consistency** (rules always hold), **Isolation** (concurrent transactions don't interfere), **Durability** (once saved, it survives a crash).
 - **Embedded vs client-server database:** one runs inside your own process and stores data in a file; the other runs as a separate server your app connects to.
+- **Partitioning:** splitting one big table into smaller pieces, often by time (one piece per day or month). Old data can then be removed by dropping a whole piece instead of deleting row by row.
+- **Dead rows / vacuum:** in PostgreSQL, deleting or updating a row leaves the old version behind until a cleanup process called vacuum reclaims the space. Heavy deleting (like pruning) means more cleanup work.
+- **Managed database:** a database run for you by a hosting provider, who handles backups, updates and uptime, usually for a monthly fee.
+- **Database driver:** the library your code uses to talk to a specific database (for PostgreSQL on Node, for example, `pg`).
+- **Container (Docker):** a packaged, isolated process with everything it needs to run. Often used to start a database locally with one command.
 - **Connection pooling:** reusing a small set of open database connections instead of opening one per request.
 - **Query builder / ORM / raw SQL:** three ways to talk to a database from code: composing queries with functions / mapping rows to objects / writing the SQL yourself.
 - **Query planner / `EXPLAIN`:** the part of a database that chooses how to run a query, and the command that shows its choice.
