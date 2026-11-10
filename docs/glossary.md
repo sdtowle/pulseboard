@@ -100,6 +100,10 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Timeout:** giving up after a set time instead of waiting forever.
 - **Relational database (SQL):** data in tables with defined columns, linked by keys and queried with SQL.
 - **Non-relational (NoSQL):** a broad family that doesn't use linked tables. Includes document (JSON-like records), key-value (lookup by key) and wide-column stores.
+- **Table / row / column:** a table is like a spreadsheet tab. Each row is one record (one check result) and each column is one piece of information about it (the time, the status code).
+- **Query:** a question you ask the database, written in SQL ("give me the last 10 results for monitor 3").
+- **Join:** combining rows from two tables using a shared key, such as each result with the name of its monitor.
+- **Extension (PostgreSQL):** an add-on that gives PostgreSQL extra abilities. TimescaleDB is one, aimed at large piles of timestamped data.
 - **Primary key / foreign key:** a column that uniquely identifies a row / a column that points to a row in another table.
 - **Normalization / denormalization:** splitting data into separate tables to avoid repeating it / deliberately repeating some to make reads faster.
 - **Transaction:** a group of changes that all succeed or all fail together.
