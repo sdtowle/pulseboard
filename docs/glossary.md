@@ -44,6 +44,10 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **SPA (single-page application):** a web app that loads once in the browser, then updates the page itself and fetches data from an API, instead of loading a new page for every click.
 - **SSR (server-side rendering):** building the page's HTML on the server before sending it, instead of in the browser. Helps with first load and search engines, and needs a server that runs your front-end code.
 - **Meta-framework (Next.js, Remix / React Router framework mode, SvelteKit):** a framework built on top of a UI library that adds routing, server rendering and often its own server. It decides more of the project's structure for you.
+- **Stale-while-revalidate:** showing the copy of data you already have straight away, then fetching a fresh one in the background and swapping it in.
+- **Cache invalidation:** deciding when a cached copy is no longer trustworthy and must be refetched. Famously one of the hard problems in software.
+- **Race condition:** a bug where the result depends on which of two things happens first (two requests finish in a different order than they started).
+- **Optimistic update:** updating the screen immediately, as if the server request had already succeeded, and undoing it if it fails.
 - **Client-side router:** a library that maps URLs to screens inside a single-page app (`/login`, `/monitors/3`) and handles the back button, links and URL parameters without a full page load.
 - **File-based routing:** deriving routes from the names of files in a folder, instead of listing them by hand in code.
 - **Type-safe routing:** a router whose links, URL parameters and query strings are checked by TypeScript, so a wrong route name is a compile error.
