@@ -44,6 +44,9 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **SPA (single-page application):** a web app that loads once in the browser, then updates the page itself and fetches data from an API, instead of loading a new page for every click.
 - **SSR (server-side rendering):** building the page's HTML on the server before sending it, instead of in the browser. Helps with first load and search engines, and needs a server that runs your front-end code.
 - **Meta-framework (Next.js, Remix / React Router framework mode, SvelteKit):** a framework built on top of a UI library that adds routing, server rendering and often its own server. It decides more of the project's structure for you.
+- **Client-side router:** a library that maps URLs to screens inside a single-page app (`/login`, `/monitors/3`) and handles the back button, links and URL parameters without a full page load.
+- **File-based routing:** deriving routes from the names of files in a folder, instead of listing them by hand in code.
+- **Type-safe routing:** a router whose links, URL parameters and query strings are checked by TypeScript, so a wrong route name is a compile error.
 - **Client state vs server state:** client state is data that lives only in the browser (which tab is open). Server state is a copy of data that lives on the server (the monitor list) and needs fetching, refreshing and caching. Tools exist specifically for the second kind.
 - **Package (`package.json`):** a folder with a `package.json` file that lists its name, scripts and dependencies. It is the unit npm installs and runs.
 - **pnpm:** a package manager (an alternative to npm). It installs faster and only lets a package import what it has declared as a dependency.
