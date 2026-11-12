@@ -41,6 +41,10 @@ Plain-English meanings for jargon used in the backlog and issues. Add to it when
 - **Transpile vs type-check:** transpiling turns TypeScript into JavaScript by stripping the types. Type-checking is the separate step that finds type errors. Some tools (Vite among them) do only the first, so a type-check step such as `tsc --noEmit` is run separately.
 - **Package scope (`@pulseboard/shared`):** a prefix in a package's name that groups related packages. Other packages in the workspace import it by that name.
 - **Dependency direction:** which packages are allowed to import which. Apps may import libraries, and libraries should never import apps.
+- **SPA (single-page application):** a web app that loads once in the browser, then updates the page itself and fetches data from an API, instead of loading a new page for every click.
+- **SSR (server-side rendering):** building the page's HTML on the server before sending it, instead of in the browser. Helps with first load and search engines, and needs a server that runs your front-end code.
+- **Meta-framework (Next.js, Remix / React Router framework mode, SvelteKit):** a framework built on top of a UI library that adds routing, server rendering and often its own server. It decides more of the project's structure for you.
+- **Client state vs server state:** client state is data that lives only in the browser (which tab is open). Server state is a copy of data that lives on the server (the monitor list) and needs fetching, refreshing and caching. Tools exist specifically for the second kind.
 - **Package (`package.json`):** a folder with a `package.json` file that lists its name, scripts and dependencies. It is the unit npm installs and runs.
 - **pnpm:** a package manager (an alternative to npm). It installs faster and only lets a package import what it has declared as a dependency.
 - **Corepack:** a tool that ships with Node and installs the right version of a package manager such as pnpm for a project.
