@@ -22,12 +22,12 @@ Core Philosophy & Operating Rules
 
 3. Production-Grade Engineering:
 
-	⚬ Prioritize clean architecture, explicit data contracts, scalable time-series storage, robust error handling, and framework-free fundamentals (vanilla DOM, proxy state, raw protocol mechanics).
+	⚬ Prioritize clean architecture, explicit data contracts, scalable time-series storage, robust error handling, and understanding the fundamentals underneath the tools (build with established tools, then rebuild selected pieces by hand as learning exercises).
 
 Tech Stack & Architecture Highlights
 
 Layer	System Target	Key Focus Areas
-Frontend UI	Zero-framework Reactive Web UI	Custom state management (Proxy), WebSockets/SSE live streams, lightweight time-series charts, DOM performance optimization.
+Frontend UI	React Single-Page App (Vite, TanStack Router)	Hand-written data fetching before adopting a library, SSE live streams, lightweight time-series charts, accessible UI. See ADR 0010.
 Web API / Application Server	REST API & WebSocket Gateway	Modular route handling, custom authentication middleware, rate limiting, and input validation.
 Background Engine	Scheduled Worker & Telemetry Engine	Asynchronous HTTP/TCP check execution, DNS lookup handling, network timeouts, and concurrency management.
 Primary Database	Relational DB (e.g., PostgreSQL / SQLite)	ACID compliance, clean schema relationships, explicit constraints.

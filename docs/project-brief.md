@@ -40,11 +40,12 @@ A feature is done when it is **working, tested, merged to `main`, and deployed**
 - **Exception: project setup.** AI may create initial scaffolding (folder structure, dependency lists, scripts and configuration) so work can start from a known baseline. It explains the conventions and the reasoning behind each choice so they can be learned, not just used.
 - Documentation (ADRs, glossary, this brief) can be drafted by AI on request. The developer reviews and edits it.
 - New terms go into [glossary.md](glossary.md) as they come up.
-- **Frameworks:** the intent is to learn how things work underneath. Whether the back end uses a framework, and whether selected parts are rebuilt without one after the app is stable, is still being decided. See ADR 0004.
+- **Frameworks and libraries:** the intent is to learn how things work underneath. The approach is to build with established tools, then rebuild selected pieces by hand as learning exercises. The front end uses React (ADR 0010), and its first data fetching is written by hand before a library such as TanStack Query is considered. Whether the back end uses a framework is still being decided (ADR 0004).
 
 ## Open decisions
 
 - Back-end framework (Express or none), see ADR 0004.
-- Database and how it is accessed (ADR not yet written; ticket 0.2).
-- Front-end approach.
+- How the code accesses the database (raw SQL, a query builder or an ORM). The database itself is PostgreSQL, see ADR 0009.
+- Whether TanStack Query is adopted, decided at ticket 2.7 after a hand-written version (ADR 0010).
+- Front-end styling and charts.
 - Which tickets form the MVP and which are stretch goals.

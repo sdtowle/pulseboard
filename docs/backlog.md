@@ -137,7 +137,7 @@ As an operator, I want limits on how often a client can call the API so that one
 
 ### 2.7 Dashboard: monitor list view: **M** · M
 As a user, I want to see all my monitors and their current status.
-- AC: Vanilla JS, no framework; renders list from the API.
+- AC: React (see ADR 0010); renders the list from the API. Data is fetched by hand with `fetch` and React hooks first, then compared with TanStack Query and the result recorded.
 - AC: Loading, empty, and error states handled.
 - AC: Accessible markup (landmarks, focus handling, status not conveyed by colour alone).
 

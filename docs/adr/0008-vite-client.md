@@ -5,7 +5,7 @@
 
 ## Context
 
-The client is a browser dashboard written in TypeScript. Whether it uses a UI framework is not decided yet (see `AGENTS.MD`, which suggests none, and the project brief's open decisions). Vite works with or without one. Browsers cannot run TypeScript directly, and the code is split across many files. Something has to turn it into files a browser can load, and it helps to have a local server that updates the page as code changes.
+The client is a browser dashboard written in TypeScript, using React (ADR 0010). Vite works with React and with other front-end approaches. Browsers cannot run TypeScript directly, and the code is split across many files. Something has to turn it into files a browser can load, and it helps to have a local server that updates the page as code changes.
 
 The options considered:
 
